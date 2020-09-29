@@ -1,31 +1,31 @@
 {
-  "name": "evaluation-js-webdriverio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "npx wdio wdio.conf.js"
-  },
-  "keywords": [
-    "Test",
-    "automation",
-    "Tool",
-    "Evaluation",
-    "JavaScript"
-],
-  "author": "Piotr Traczyk",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Idea-Pool/evaluation-js-webdriverio"
-  },
-  "license": "ISC",
-  "devDependencies": {
-    "@wdio/cli": "^6.5.2",
-    "@wdio/jasmine-framework": "^6.5.0",
-    "@wdio/local-runner": "^6.5.2",
-    "@wdio/spec-reporter": "^6.4.7",
-    "@wdio/sync": "^6.5.0",
-    "chromedriver": "^85.0.1",
-    "wdio-chromedriver-service": "^6.0.4"
-  }
+    "name": "evaluation-js-webdriverio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "wdio wdio.conf.js"
+    },
+    "keywords": [
+        "Test",
+        "automation",
+        "Tool",
+        "Evaluation",
+        "JavaScript"
+    ],
+    "author": "Piotr Traczyk",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Idea-Pool/evaluation-js-webdriverio"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^6.5.2",
+        "@wdio/jasmine-framework": "^6.5.0",
+        "@wdio/local-runner": "^6.5.2",
+        "@wdio/spec-reporter": "^6.4.7",
+        "@wdio/sync": "^6.5.0",
+        "chromedriver": "^85.0.1",
+        "wdio-chromedriver-service": "^6.0.4"
+    }
 }
