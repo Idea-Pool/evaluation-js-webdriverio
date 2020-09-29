@@ -28,4 +28,6 @@ npx wdio config
 
 ```bash
 npx wdio wdio.conf.js
+or
+npm test
 ```
