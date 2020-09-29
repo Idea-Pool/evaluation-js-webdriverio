@@ -1,31 +1,10 @@
-> Write test cases which test the following actions/checks:
-> - [x] Opening an URL
-> - [x] Checking visibility
-> - [x] Checking presence
-> - [x] Checking text content
-> - [x] Clicking on element
-> - [x] Checking browser title
-> - [x] Checking browser URL
-> - [x] Checking input text
-> - [x] Checking input placeholder
-> - [x] Typing into input
-> - [x] Checking checkbox state
-> - [x] Clicking on checkbox
-> - [x] Checking radio button state
-> - [x] Clicking on radio button
-> - [x] Checking dropdown selected value
-> - [x] Checking dropdown option presence
-> - [x] Selecting from dropdown
-> - [x] Checking whether button is enabled
-> - [x] Checking whether input is readonly
-> - [x] Checking attribute of element
-> - [x] Checking number of elements
-> - [x] Selecting element by its text
-> - [x] Checking whether element is in the viewport
-> - [x] Scrolling page
-> - [ ] Any more action/check necessary...
-
 # Test cases
+
+Tests will be executed on:
+
+-   [x] Google Chrome
+-   [ ] Firefox
+-   [ ] IE11.
 
 ## `TC-1` Checking landing pages elements
 
@@ -36,7 +15,7 @@
 1. **And** Get started button should be visible in the hero section
 1. **When** Get started button is clicked in the hero section
 1. **Then** the URL should be https://angular.io/start
-1. **And** the title on the content should be "Getting Started with Angular: Your First App"
+1. **And** the title on the content should be "Introduction to the Angular Docs"
 
 ## `TC-2` Checking search field on landing page
 

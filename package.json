@@ -1,34 +1,31 @@
 {
-  "name": "evaluation-template",
-  "version": "0.0.1",
-  "description": "This is a template repository to create test-ware for evaluating certain (JS) test automation tools.",
-  "main": "-",
-  "scripts": {
-    "test": "echo \"No tests defined\" && exit 1",
-    "lint": "eslint tests --fix"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/szikszail/evaluation-template.git"
-  },
-  "keywords": [
-    "Test",
-    "automation",
-    "Tool",
-    "Evaluation",
-    "JavaScript"
-  ],
-  "author": "Laszlo Szikszai <sziklaszlo@gmail.com>",
-  "license": "SEE LICENSE IN LICENSE.md",
-  "bugs": {
-    "url": "https://github.com/szikszail/evaluation-template/issues"
-  },
-  "homepage": "https://github.com/szikszail/evaluation-template#readme",
-  "dependencies": {
-    "eslint": "^6.8.0",
-    "husky": "^4.0.10"
-  },
-  "husky": {
-    "precommit": "npm run lint"
-  }
+    "name": "evaluation-js-webdriverio",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "wdio wdio.conf.js"
+    },
+    "keywords": [
+        "Test",
+        "automation",
+        "Tool",
+        "Evaluation",
+        "JavaScript"
+    ],
+    "author": "Piotr Traczyk",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Idea-Pool/evaluation-js-webdriverio"
+    },
+    "license": "ISC",
+    "devDependencies": {
+        "@wdio/cli": "^6.5.2",
+        "@wdio/jasmine-framework": "^6.5.0",
+        "@wdio/local-runner": "^6.5.2",
+        "@wdio/spec-reporter": "^6.4.7",
+        "@wdio/sync": "^6.5.0",
+        "chromedriver": "^85.0.1",
+        "wdio-chromedriver-service": "^6.0.4"
+    }
 }
