@@ -1,36 +1,39 @@
 const mainPage = require('../pageobjects/angularPage/main.page');
 const docsPage = require('../pageobjects/angularPage/docs.page');
+const expect = require('chai').expect;
+
 
 describe('TC-1 - Checking Landing Pages Elements', () => {
-    beforeAll(() => {
-        browser.url('https://angular.io/');
+    before(() => {
+        mainPage.open();
     });
 
     it('Angular Logo in the navbar visible', () => {
-        expect($('.nav-link.home img').isDisplayedInViewport()).toBeTrue();
+        expect(mainPage.angularLogoNavBar.isDisplayedInViewport()).to.equal(true);
     });
 
     it('Angular Logo in the hero section visible', () => {
-        expect($('.hero-logo img').isDisplayedInViewport()).toBeTrue();
+        expect(mainPage.angularLogoHeroSection.isDisplayedInViewport()).to.equal(true);
     });
 
     it('Proper headline in hero section', () => {
-        expect($('.hero-headline').getText()).toContain('One framework.\nMobile & desktop.');
+        expect(mainPage.heroHeadline.getText()).to.include('The modern web\ndeveloper\'s platform');
     });
 
     it('Get started button is clickable', () => {
-        expect($('.homepage-container .button').isClickable()).toBeTrue();
+        expect(mainPage.getStartedButton.isClickable()).to.equal(true);
     });
+
     describe('Get Started Page', () => {
-        beforeAll('Click Get Started button', () => {
+        before('Click Get Started button', () => {
             mainPage.clickGetStartedButton();
             docsPage.title.waitForDisplayed();
         });
         it('URL is https://angular.io/docs', () => {
-            expect(docsPage.getUrl()).toBe('https://angular.io/docs');
+            expect(docsPage.getUrl()).to.equal('https://angular.io/docs');
         });
         it('Title is "Introduction to the Angular Docs"', () => {
-            expect(docsPage.title.getText()).toBe('Introduction to the Angular Docs');
+            expect(docsPage.title.getText()).to.equal('Introduction to the Angular Docs');
         });
     });
 });

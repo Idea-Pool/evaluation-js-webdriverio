@@ -24,6 +24,10 @@ class MainPage extends Page {
         return $('[aria-label="search"]');
     }
 
+    socialElement(socialElementName) {
+        return $(`.toolbar-external-icons-container [title=${socialElementName}]`);
+    }
+
     /**
      * overwrite specifc options to adapt it to page object
      */

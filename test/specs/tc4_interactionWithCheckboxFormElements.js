@@ -1,4 +1,5 @@
 const componentsPage = require('../pageobjects/getbootstrapPage/checkboxesAndRadios.page');
+const expect = require('chai').expect;
 
 describe('TC-4 - Interaction with checkbox form elements', () => {
     beforeEach(() => {
@@ -6,19 +7,20 @@ describe('TC-4 - Interaction with checkbox form elements', () => {
     });
 
     it('Have enabled checkbox', () => {
-        expect(componentsPage.defaultCheck1.isEnabled()).toBeTrue();
+        expect(componentsPage.defaultCheck1.isEnabled()).to.equal(true);
     });
 
     it('Have disabled checkbox', () => {
-        expect(componentsPage.defaultCheck2.isEnabled()).toBeFalse();
+        expect(componentsPage.defaultCheck2.isEnabled()).to.equal(false);
     });
 
     it('Have unchecked checkbox', () => {
-        expect(componentsPage.defaultCheck1.getProperty('checked')).toBeFalse();
+        expect(componentsPage.defaultCheck1.getProperty('checked')).to.equal(false);
     });
 
     it('Can check checkbox', () => {
+        $('.bd-content-title [href="#default-stacked"]').scrollIntoView();
         componentsPage.defaultCheck1.click();
-        expect(componentsPage.defaultCheck1.getProperty('checked')).toBeTrue();
+        expect(componentsPage.defaultCheck1.getProperty('checked')).to.equal(true);
     });
 });
