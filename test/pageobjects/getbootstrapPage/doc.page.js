@@ -6,6 +6,14 @@ class Doc extends Page {
         return $('#search-input');
     }
 
+    get searchItem() {
+        return $('.ds-dataset-1 .algolia-docsearch-suggestion--content');
+    }
+
+    get searchItems() {
+        return $$('.ds-dataset-1 .algolia-docsearch-suggestion--content');
+    }
+
     open() {
         return super.open('docs/5.0/getting-started/introduction/');
     }
